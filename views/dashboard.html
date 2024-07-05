@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rest APIs || Fizzxy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(30, 37, 77, 1);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+        
+        .image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+
+        .swagger-container {
+            max-width: 90%;
+            margin: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            margin-top: 150px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .swagger-ui .topbar {
+            background: none;
+            border-bottom: none;
+        }
+
+        .swagger-ui .topbar .wrapper {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.3/swagger-ui.css">
+</head>
+<body>
+	 <div class="image-container"> 
+       <img id="background-image" src="https://i.top4top.io/p_30880zxk70.jpeg" alt="Background Image"> 
+    </div> 
+   <!-- <div class="video-container"> -->
+      <!--  <video autoplay muted loop id="background-video"> -->
+           <!-- <source src="https://pomf2.lain.la/f/rm8xhltd.mp4" type="video/mp4"> -->
+          <!--  Your browser does not support HTML5 video. -->
+       <!-- </video> -->
+   <!-- </div> -->
+    <div class="swagger-container">
+        <div id="swagger-ui"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.3/swagger-ui-bundle.js"></script>
+    <script>
+    	window.onload = function() {
+            const openapiSpec ={
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Rest APIs || Fizzxy",
+    "version": "1.0.0",
+    "description": "Rest Api Ini free",
+    "x-logo": {
+      "url": "https://i.top4top.io/p_30880zxk70.jpeg",
+      "altText": "Rest APIs || Fizzxy",
+    },
+  },
+  "tags": [
+    {
+      "name": "Ai"
+    },
+    {
+      "name": "Downloader"
+    },
+    {
+      "name": "Searching"
+    },
+    {
+      "name": "Tools"
+    }
+  ],
+  "paths": {
+  	"/ai/blackbox": {
+      "post": { 	
+      "tags": [
+          "Ai"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "blackbox Ai",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "kapan indonesia merdeka?"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+  	"/ai/chatbot": {
+      "post": { 	
+      "tags": [
+          "Ai"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Chatbot AI",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "siapa nama kamu?"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/ai/chatgpt": {
+      "post": { 	
+      "tags": [
+          "Ai"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Chatgpt AI",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "siapa nama kamu?"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/ai/goodyai": {
+      "post": { 	
+      "tags": [
+          "Ai"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "goody AI",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "kapan indonesia merdeka?"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/ai/talkai": {
+      "post": { 	
+      "tags": [
+          "Ai"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "talk AI",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "kapan indonesia merdeka?"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/ai/talkai-img": {
+      "post": { 	
+      "tags": [
+          "Ai"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "talk-img AI",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "cat"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/ai/thinkany": {
+      "post": { 	
+      "tags": [
+          "Ai"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "thinkany AI",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "kapan indonesia merdeka?"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+  	"/downloader/capcut": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader Capcut",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+  	"/downloader/cocofun": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader Cocofun",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+  	"/downloader/instagram": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader Instagram",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+  	"/downloader/like": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader like",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/downloader/soundcloud": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader SoundCloud",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/downloader/spotify": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader track Spotify",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+   "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+   "/downloader/snackvideo": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader snackvideo",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+	"/downloader/tiktok": {
+      "post": { 	
+      "tags": [
+          "Downloader"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Downloader Tiktok slide and video",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": "enter url parameters"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/searching/lahelu": {
+      "get": { 	
+      "tags": [
+          "Searching"
+        ],
+   	"parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Search query for lahelu.com",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "description": "page lahelu.com",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/searching/soundcloud": {
+      "post": { 	
+      "tags": [
+          "Searching"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Searching track SoundCloud",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "query": {
+           "required": true,    
+            "default": "somewhere we only know"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/searching/spotify": {
+      "post": { 	
+      "tags": [
+          "Searching"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Searching track Spotify",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "query": {
+           "required": true,    
+            "default": "somewhere we only know"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+      "/tools/qc": {
+      "post": { 	
+      "tags": [
+          "Tools"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Tools Qc",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "text": {
+           "required": true,    
+            "default": "hai bwang"
+             },
+           "name": {
+           "required": true,    
+            "default": "sakura"
+             },
+           "imageUrl": {
+           "required": true,    
+            "default": "https://telegra.ph/file/4fa64ed06ca3687062314.jpg"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     },
+     "/tools/ssweb": {
+      "post": { 	
+      "tags": [
+          "Tools"
+        ],
+   	"requestBody": {
+        "required": true,
+         "description": "Tools Ssweb",
+         "content": {
+         "application/json": {   
+         "schema": {
+         "type": "object",
+         "properties": {
+           "url": {
+           "required": true,    
+            "default": ""
+             },
+           "device": {
+           "required": true,    
+            "default": "desktop"
+             }
+           }
+         }
+       }
+     }
+   },
+        "responses": {
+           "200": {
+           "description": "Successfully operation"
+           },
+           "400": {
+           "description": "Bad request"
+           },
+           "500": {
+           "description": "Internal Server Error"
+           }
+         }
+       }
+     }
+   },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  },
+  "servers": [
+    {
+      "url": "https://sakura-jade.vercel.app/api",
+    }
+  ]
+};                     
+
+            const ui = SwaggerUIBundle({
+                spec: openapiSpec, // Gunakan objek spesifikasi OpenAPI langsung
+                dom_id: '#swagger-ui',
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIBundle.SwaggerUIStandalonePreset
+                ],
+                layout: "BaseLayout",
+                deepLinking: true
+            });
+            window.ui = ui;
+        };
+</script>
+</body>
+</html>
